@@ -7,6 +7,7 @@ import { Hero } from '../hero'
 import { HeroService } from '../hero.service';
 
 @Component({
+  // moduleId: module.id,
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
   styleUrls: ['./hero-detail.component.css']
@@ -25,6 +26,9 @@ export class HeroDetailComponent implements OnInit {
       .subscribe(hero => this.hero = hero);
   }
 
+  goBack(): void {
+    this.location.back();
+  }
 
   @Input()
   hero: Hero
