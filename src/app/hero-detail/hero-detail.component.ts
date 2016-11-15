@@ -13,5 +13,7 @@ export class HeroDetailComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
+  @Input()
+  hero: Hero
 }
